@@ -2,6 +2,7 @@
 # Created on December 2020
 # This program checks if a year is a leap year
 
+import constants
 
 def main():
     # This function checks if a year is a leap year
@@ -13,9 +14,9 @@ def main():
     # process + output
     try:
         year_as_number = int(year_as_string)
-        if year_as_number % 4 == 0:
-            if year_as_number % 100 == 0:
-                if year_as_number % 400 == 0:
+        if year_as_number % constants.RULES_A == 0:
+            if year_as_number % constants.RULES_B == 0:
+                if year_as_number % constants.RULES_C == 0:
                     print("Leap year")
                 else:
                     print("Not a leap year")
